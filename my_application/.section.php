@@ -1,0 +1,3 @@
+<?
+$sSectionName="my_application";
+?>
