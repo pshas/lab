@@ -111,7 +111,7 @@
 
 		$pdo = new PDO($dsn, $username, $password);
 		$user_id = $USER->GetId();
-		$stmt = $pdo->prepare("SELECT * FROM user_applications a WHERE user_id =:user_id" OR lab_id =:user_id");
+		$stmt = $pdo->prepare("SELECT * FROM user_applications a WHERE user_id =:user_id OR lab_id =:user_id");
 		$stmt->execute([':user_id' => $user_id]);
 		while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			echo "<tr>";
