@@ -121,7 +121,7 @@
 				echo "<td>" . htmlspecialchars($row['work_department']) . "</td>";
 				echo "<td>" . htmlspecialchars($row['NAME_IZD']) . "</td>";
 				echo "<td>" . htmlspecialchars($row['ID_I']) . "</td>";
-				echo "<td>" . htmlspecialchars($row['']) . "</td>";
+				echo "<td>" . htmlspecialchars($row['date_man']) . "</td>";
 				echo "<td>" . htmlspecialchars($row['']) . "</td>";
 				echo "<td>" . htmlspecialchars($row['task']) . "</td>";
 				echo "<td>" . htmlspecialchars($row['status']) . "</td>";
