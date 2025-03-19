@@ -111,7 +111,7 @@
 
 		$pdo = new PDO($dsn, $username, $password);
 		$user_id = $USER->GetId();
-		$stmt = $pdo->prepare("SELECT * FROM user_applications a WHERE user_id =:user_id AND is_editable = 1 AND NOT EXISTS (SELECT * FROM user_applications b WHERE a.id = b.id AND user_id = :user_id)");
+		$stmt = $pdo->prepare("SELECT * FROM user_applications a WHERE user_id =:user_id" OR lab_id = :user_id");
 		$stmt->execute([':user_id' => $user_id]);
 		while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			echo "<tr>";
@@ -125,6 +125,7 @@
 				echo "<td>" . htmlspecialchars($row['']) . "</td>";
 				echo "<td>" . htmlspecialchars($row['task']) . "</td>";
 				echo "<td>" . htmlspecialchars($row['status']) . "</td>";
+        
 				echo "<td> <button id='submitModal' class='btn btn-success btn-sm' onclick='openSubmitModal(" . $row['id'] . ")'>Оформить</button></td>";
 }
 ?>
