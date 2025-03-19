@@ -101,7 +101,7 @@
 						$("#department").val(response.work_department);
 						$("#name").val(response.NAME_IZD);
 						$("#detail").val(response.ID_I);
-						$("#date").val(response.date_manufacture);
+						$("#date").val(response.date_man);
 						$("#batch").val(response.batch_number);
 						$("#task").val(response.task);
 						$("#workModal").modal("show");
