@@ -40,7 +40,7 @@ $currentUserId = $USER->GetID();
                 $password = 'root';
                 $pdo = new PDO($dsn, $username, $password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 
-                $stmt = $pdo->prepare("SELECT * FROM user_applications WHERE is_editable = 0");
+                $stmt = $pdo->prepare("SELECT * FROM user_applications WHERE is_editable IN (0,2)");
                 $stmt->execute();
 
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
