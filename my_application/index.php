@@ -125,7 +125,7 @@
 				echo "<td>" . htmlspecialchars($row['']) . "</td>";
 				echo "<td>" . htmlspecialchars($row['task']) . "</td>";
 				echo "<td>" . htmlspecialchars($row['status']) . "</td>";
-        if ($row['is_editable'] = 1) {
+        if ($row['is_editable'] === 1) {
 				echo "<td> <button id='submitModal' class='btn btn-success btn-sm' onclick='openSubmitModal(" . $row['id'] . ")'>Оформить</button></td>";
         }
         if ($row['is_editable'] = 2 && $row['lab_id'] = $user_id) {
