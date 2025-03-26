@@ -128,7 +128,7 @@
         if ($row['is_editable'] === 1) {
 				echo "<td> <button id='submitModal' class='btn btn-success btn-sm' onclick='openSubmitModal(" . $row['id'] . ")'>Оформить</button></td>";
         }
-        if ($row['is_editable'] = 2 && $row['lab_id'] = $user_id) {
+        if ($row['is_editable'] === 2 && $row['lab_id'] = $user_id) {
           echo "<td> <button id='submitModal' class='btn btn-success btn-sm' onclick='openSubmitModal(" . $row['id'] . ")'>Оформить</button></td>";
           }
         
