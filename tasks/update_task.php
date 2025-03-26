@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $userId > 0) {
         try {
             $pdo = new PDO($dsn, $username, $password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
             
-            $stmt = $pdo->prepare("UPDATE user_applications SET is_editable = 2, lab_id = ?");
+            $stmt = $pdo->prepare("UPDATE user_applications SET is_editable = 2, lab_id = ?, status = 'В работе' ");
             $stmt->execute([$userId, $taskId]);
             
             echo json_encode(['success' => true]);
