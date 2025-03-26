@@ -55,7 +55,9 @@ $currentUserId = $USER->GetID();
                     echo "<td>" . htmlspecialchars($row['batch_number'] ?? '—') . "</td>";
                     echo "<td>" . htmlspecialchars($row['task']) . "</td>";
                     echo "<td>" . htmlspecialchars($row['status']) . "</td>";
-                    echo "<td><button class='btn btn-primary take-work' data-id='" . htmlspecialchars($row['id']) . "'>Взять в работу</button></td>";
+                    if ($row['is_editable'] === 0){
+                    	echo "<td><button class='btn btn-primary take-work' data-id='" . htmlspecialchars($row['id']) . "'>Взять в работу</button></td>";
+					}
                     echo "</tr>";
                 }
                 ?>
