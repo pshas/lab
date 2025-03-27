@@ -136,11 +136,9 @@ function openSubmitModal(templateId) {
         if (data.success) {
             // Заполняем поля модального окна полученными данными
             document.getElementById('research_object').value = data.research_object;
-			document.getElementById('initiator').value = data.initiator;
+			      document.getElementById('initiator').value = data.initiator;
             document.getElementById('task').value = data.task;
             document.getElementById('note').value = data.goal;
-            document.getElementById('status').value = data.status;
-            document.getElementById('report').value = data.report;
             // Открываем модальное окно
             $('#submitModal').modal('show');
         } else {
