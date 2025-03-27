@@ -56,22 +56,6 @@
             <textarea class="form-control" name="note" id="note" rows="3" required></textarea>
           </div>
 
-          <!-- Статус -->
-          <div class="form-group">
-            <label for="status">Статус</label>
-            <select class="form-control" name="status" id="status" required>
-              <option value="Новый">Новый</option>
-              <option value="В процессе">В процессе</option>
-              <option value="Завершён">Завершён</option>
-            </select>
-          </div>
-
-          <!-- Отчёт -->
-          <div class="form-group">
-            <label for="report">Отчёт</label>
-            <textarea class="form-control" name="report" id="report" rows="3"></textarea>
-          </div>
-
           <!-- Кнопка подтверждения -->
           <button type="button" class="btn btn-success" onclick="confirmSubmission()">Подтвердить оформление</button>
         </form>
