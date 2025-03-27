@@ -188,7 +188,7 @@ if (!$application) {
                 </div>
                 
                 <div class="d-flex justify-content-end mt-4">
-                    <a href="applications.php" class="btn btn-outline-secondary me-3">Назад</a>
+                    <a href="index.php" class="btn btn-outline-secondary me-3">Назад</a>
                     <button type="submit" class="btn btn-submit">
                         <i class="bi bi-check-circle"></i> Сохранить отчёт
                     </button>
