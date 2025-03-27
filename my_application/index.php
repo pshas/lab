@@ -113,7 +113,7 @@
 				echo "<td> <button id='submitModal' class='btn btn-success btn-sm' onclick='openSubmitModal(" . $row['id'] . ")'>Оформить</button></td>";
         }
         if ($row['is_editable'] === 2 && $row['lab_id'] = $user_id) {
-          echo "<td> <button id='submitModal' class='btn btn-success btn-sm' onclick='openSubmitModal(" . $row['id'] . ")'>Отчёт</button></td>";
+          echo "<td> <a href='report_form.php?id=" . $row['id'] . "'class='btn btn-info btn-sm''>Отчёт</td>";
           }
         
 }
