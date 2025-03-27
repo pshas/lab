@@ -11,13 +11,16 @@ $data = json_decode(file_get_contents('php://input'), true);
 
 if (isset($data['id'])) {
     $template_id = $data['id'];
+    $status = $data['status'];
     $is_editable = $data['is_editable'];
 	$date_create = date('d.m.Y H:i:s');
     // Запрос для обновления статуса и активации шаблона
-	$stmt = $pdo->prepare("UPDATE user_applications SET date_create = :date_create, is_editable = :is_editable WHERE id = :id");
+	$stmt = $pdo->prepare("UPDATE user_applications SET date_create = :date_create, status = :status, is_editable = :is_editable WHERE id = :id");
     $result = $stmt->execute([
+        ':status' => $status,
         ':is_editable' => $is_editable,
 		':id' => $template_id,
+        ':date_create' => $date_create
     ]);
 
     if ($result) {
