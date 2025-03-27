@@ -19,7 +19,8 @@ if (isset($data['id'])) {
     $result = $stmt->execute([
         ':status' => $status,
         ':is_editable' => $is_editable,
-		':id' => $template_id
+		':id' => $template_id,
+        ':date_create' => $date_create
     ]);
 
     if ($result) {
