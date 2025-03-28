@@ -53,18 +53,7 @@ VALUES (:block_id, :USER_ID, :NAME_IZD, :ID_I, :COUNTRY, :work_department, :full
 	':date_detail' => $date_detail
 	]);
 }
-?>
-<!-- jQuery -->
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<!-- Bootstrap CSS -->
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Bootstrap JS (зависит от jQuery) -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-
-<style>
+?> <!-- jQuery --> <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Bootstrap CSS --> <!-- Bootstrap JS (зависит от jQuery) --> <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script> <style>
         .suggestions {
             border: 1px solid #ccc;
             max-width: 300px;
@@ -289,7 +278,82 @@ VALUES (:block_id, :USER_ID, :NAME_IZD, :ID_I, :COUNTRY, :work_department, :full
 			 Прием/сдача
 		</td>
 	</tr>
+	<tr>
+		<td colspan="3">
+			&nbsp;
+		</td>
+		<td rowspan="1">
+			&nbsp;
+		</td>
+		<td rowspan="2">
+			&nbsp;
+		</td>
+		<td rowspan="3">
+			&nbsp;
+		</td>
+	</tr>
 	</tbody>
 	</table>
+	<div style="position: fixed; bottom: 20px; right: 20px;">
+    <button onclick="window.print()" class="btn btn-primary no-print">
+        <i class="fas fa-print"></i> Печать
+    </button>
+</div>
 </form>
 <script src="form.js"></script>
+
+<style>
+    @media print {
+        body * {
+            visibility: hidden;
+        }
+        .form, .form * {
+            visibility: visible;
+        }
+        .form {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+        .no-print {
+            display: none !important;
+        }
+        
+        /* Улучшение отображения таблицы при печати */
+        table.form {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table.form td, table.form th {
+            border: 1px solid #000;
+            padding: 8px;
+        }
+    }
+    
+    /* Стиль для кнопки печати */
+    .print-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+</style>
+
+<script>
+function printForm() {
+    // Скрыть лишние элементы
+    document.querySelectorAll('.no-print').forEach(el => {
+        el.style.display = 'none';
+    });
+    
+    window.print();
+    
+    // Показать обратно после печати
+    setTimeout(() => {
+        document.querySelectorAll('.no-print').forEach(el => {
+            el.style.display = '';
+        });
+    }, 500);
+}
+</script>
