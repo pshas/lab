@@ -295,10 +295,7 @@ VALUES (:block_id, :USER_ID, :NAME_IZD, :ID_I, :COUNTRY, :work_department, :full
 		</td>
 	</tr>
 	<tr>
-		<td class="td-col" colspan="1">
-			&nbsp;
-		</td>
-		<td class="td-col" rowspan="1" colspan="1">
+		<td class="td-col" colspan="6">
 			&nbsp;
 		</td>
 	</tr>
