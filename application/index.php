@@ -163,6 +163,14 @@ VALUES (:block_id, :USER_ID, :NAME_IZD, :ID_I, :COUNTRY, :work_department, :full
 		</td>
 	</tr>
 	<tr>
+		<td colspan="2">
+			&nbsp;
+		</td>
+		<td colspan="4">
+			&nbsp;
+		</td>
+	</tr>
+	<tr>
 		<td colspan="6">
 			 Протокол поставки
 		</td>
@@ -287,16 +295,21 @@ VALUES (:block_id, :USER_ID, :NAME_IZD, :ID_I, :COUNTRY, :work_department, :full
 		</td>
 	</tr>
 	<tr>
-		<td colspan="3">
+		<td colspan="5">
 			&nbsp;
 		</td>
 		<td rowspan="1">
 			&nbsp;
 		</td>
-		<td rowspan="2">
+	</tr>
+	<tr>
+		<td colspan="3">
 			&nbsp;
 		</td>
-		<td rowspan="3">
+		<td rowspan="1" colspan="2">
+			&nbsp; &nbsp;
+		</td>
+		<td colspan="1">
 			&nbsp;
 		</td>
 	</tr>
