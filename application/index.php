@@ -327,12 +327,12 @@ VALUES (:block_id, :USER_ID, :NAME_IZD, :ID_I, :COUNTRY, :work_department, :full
         /* Улучшение отображения таблицы при печати */
         table.form {
             border-collapse: collapse;
-            width: 30%;
+            width: 35%;
 			height: 40%;
         }
         table.form td, table.form th {
             border: 1px solid #000;
-            padding: 8px;
+            padding: 4px;
         }
 
     @media print {
