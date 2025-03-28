@@ -41,7 +41,6 @@
             }
 
 table.form {
-			table-layout: fixed;
 			position: sticky;
 			margin-left: auto;
     		margin-right: auto;
@@ -55,10 +54,6 @@ table.form td {
 			border: 2px solid grey;
 			width: auto;
 		}
-
-.td-col[style*="width: 50%;"] {
-	width: 50%;
-}
 
 input[type=text] {
 			border: none;
