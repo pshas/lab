@@ -295,7 +295,7 @@ VALUES (:block_id, :USER_ID, :NAME_IZD, :ID_I, :COUNTRY, :work_department, :full
 		</td>
 	</tr>
 	<tr>
-		<td colspan="5">
+		<td colspan="2">
 			&nbsp;
 		</td>
 		<td rowspan="1">
