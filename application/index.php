@@ -294,11 +294,15 @@ VALUES (:block_id, :USER_ID, :NAME_IZD, :ID_I, :COUNTRY, :work_department, :full
 			 Прием/сдача
 		</td>
 	</tr>
+	<colgroup>
+		<col style="width: 50%;">
+		<col style="width: 50%;">
+	</colgroup>
 	<tr>
-		<td colspan="2" style="width: 50%;">
+		<td colspan="3" style="width: 50%;">
 			&nbsp;
 		</td>
-		<td rowspan="1" style="width: 50%;">
+		<td rowspan="3" colspan="3" style="width: 50%;">
 			&nbsp;
 		</td>
 	</tr>
