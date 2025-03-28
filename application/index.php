@@ -320,9 +320,6 @@ VALUES (:block_id, :USER_ID, :NAME_IZD, :ID_I, :COUNTRY, :work_department, :full
             top: 0;
             width: 100%;
         }
-        .no-print {
-            display: none !important;
-        }
         
         /* Улучшение отображения таблицы при печати */
         table.form {
