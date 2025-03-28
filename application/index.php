@@ -295,10 +295,10 @@ VALUES (:block_id, :USER_ID, :NAME_IZD, :ID_I, :COUNTRY, :work_department, :full
 		</td>
 	</tr>
 	<tr>
-		<td colspan="1" style="width: 50%;">
+		<td class="td-col" colspan="1" style="width: 50%;">
 			&nbsp;
 		</td>
-		<td rowspan="1" colspan="1" style="width: 50%;">
+		<td class="td-col" rowspan="1" colspan="1" style="width: 50%;">
 			&nbsp;
 		</td>
 	</tr>
