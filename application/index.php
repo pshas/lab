@@ -148,7 +148,7 @@ VALUES (:block_id, :USER_ID, :NAME_IZD, :ID_I, :COUNTRY, :work_department, :full
 	</tr>
 	<tr>
 		<td>
-			&nbsp;
+			Номер партии
 		</td>
 		<td>
 			&nbsp;
