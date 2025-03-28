@@ -166,7 +166,7 @@ VALUES (:block_id, :USER_ID, :NAME_IZD, :ID_I, :COUNTRY, :work_department, :full
 		<td colspan="2">
 			&nbsp;
 		</td>
-		<td colspan="4">
+		<td colspan="4" style="display: flex;">
 			<div style="width: 40%; display: flex;"> 
 				<input type="checkbox" id="material1" name="material1" value="Plastic">
   				<label for="material1"> Plastic</label><br>
