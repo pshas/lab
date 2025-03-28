@@ -311,8 +311,10 @@ VALUES (:block_id, :USER_ID, :NAME_IZD, :ID_I, :COUNTRY, :work_department, :full
 	</tr>
 	<tr>
 		<td class="td-col" colspan="6">
-		<input type="text" id="note" name="note" style="width: 50%">
-		<input type="text" id="note" name="note" style="width: 50%">
+			<div style="display: flex;">
+				<input type="text" id="note" name="note" style="width: 50%">
+				<input type="text" id="note" name="note" style="width: 50%">
+			</div>
 		</td>
 	</tr>
 	<tr>
