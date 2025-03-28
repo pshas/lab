@@ -167,7 +167,7 @@ VALUES (:block_id, :USER_ID, :NAME_IZD, :ID_I, :COUNTRY, :work_department, :full
 			&nbsp;
 		</td>
 		<td colspan="4">
-			<div style="display: flex;">
+			<div style="display: flex; margin: 0px;">
 				<div style="width: 50%; display: flex; height: auto; border: 1px solid #000; margin: 0px;"> 
 					<input type="checkbox" id="material1" name="material1" value="Plastic">
   					<label for="material1"> Plastic</label><br>
