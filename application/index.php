@@ -125,16 +125,16 @@ VALUES (:block_id, :USER_ID, :NAME_IZD, :ID_I, :COUNTRY, :work_department, :full
 		<td rowspan="1">
 			<input type="date" id="date_man" name="date_man">
 		</td>
-		<td rowspan="2" colspan="1">
+		<td rowspan="3" colspan="1">
 			 Поставщик
 		</td>
-		<td rowspan="2">
+		<td rowspan="3">
 			<input type="text" id="COUNTRY" name="country"><br>
 		</td>
-		<td rowspan="2" colspan="1">
+		<td rowspan="3" colspan="1">
 			 Количество
 		</td>
-		<td rowspan="2">
+		<td rowspan="3">
 			 <label for="count"></label> <input type="text" id="count_detail" name="count_detail"> <br>
 		</td>
 	</tr>
