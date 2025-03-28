@@ -145,6 +145,8 @@ VALUES (:block_id, :USER_ID, :NAME_IZD, :ID_I, :COUNTRY, :work_department, :full
 		<td rowspan="1">
 			<input type="date" id="date_del" name="date_del">
 		</td>
+	</tr>
+	<tr>
 		<td colspan="1">
 			Номер партии⁠
 		</td>
