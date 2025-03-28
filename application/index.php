@@ -328,6 +328,17 @@ VALUES (:block_id, :USER_ID, :NAME_IZD, :ID_I, :COUNTRY, :work_department, :full
 			&nbsp;
 		</td>
 	</tr>
+	<tr>
+		<td colspan="3">
+			&nbsp;
+		</td>
+		<td rowspan="1" colspan="2">
+			&nbsp; &nbsp;
+		</td>
+		<td colspan="1">
+			&nbsp;
+		</td>
+	</tr>
 	</tbody>
 	</table>
 	<div style="position: fixed; bottom: 20px; right: 20px;">
