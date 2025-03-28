@@ -167,8 +167,8 @@ VALUES (:block_id, :USER_ID, :NAME_IZD, :ID_I, :COUNTRY, :work_department, :full
 			&nbsp;
 		</td>
 		<td colspan="4">
-			<div style="display: flex;">
-				<div style="width: 45%; display: flex;"> 
+			<div style="display: flex; border: 1px black">
+				<div style="width: 45%; display: flex; height: auto;"> 
 					<input type="checkbox" id="material1" name="material1" value="Plastic">
   					<label for="material1"> Plastic</label><br>
   					<input type="checkbox" id="material2" name="material2" value="Metal">
@@ -176,7 +176,7 @@ VALUES (:block_id, :USER_ID, :NAME_IZD, :ID_I, :COUNTRY, :work_department, :full
   					<input type="checkbox" id="material" name="material3" value="Painted">
   					<label for="material3"> Painted</label>
 				</div>
-				<div style="width: 55%; display: flex;"> 
+				<div style="width: 55%; display: flex; height: auto;"> 
 					<input type="checkbox" id="processing1" name="processing1" value="Zeiss">
   					<label for="processing1"> Zeiss</label><br>
   					<input type="checkbox" id="processing2" name="processing2" value="LaserTracer">
