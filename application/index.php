@@ -302,7 +302,7 @@ VALUES (:block_id, :USER_ID, :NAME_IZD, :ID_I, :COUNTRY, :work_department, :full
 		<td colspan="1" style="width: 50%;">
 			&nbsp;
 		</td>
-		<td rowspan="3" colspan="1" style="width: 50%;">
+		<td rowspan="1" colspan="1" style="width: 50%;">
 			&nbsp;
 		</td>
 	</tr>
