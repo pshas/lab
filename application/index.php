@@ -328,6 +328,7 @@ VALUES (:block_id, :USER_ID, :NAME_IZD, :ID_I, :COUNTRY, :work_department, :full
         table.form {
             border-collapse: collapse;
             width: 40%;
+			height: 100%;
         }
         table.form td, table.form th {
             border: 1px solid #000;
