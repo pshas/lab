@@ -303,10 +303,6 @@ VALUES (:block_id, :USER_ID, :NAME_IZD, :ID_I, :COUNTRY, :work_department, :full
 <script src="form.js"></script>
 
 <style>
-
-body * {
-            visibility: hidden;
-        }
         .form, .form * {
             visibility: visible;
         }
