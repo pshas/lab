@@ -46,9 +46,13 @@ require("header.php");
                     var block = JSON.parse(blockData);
                     $('#blocks-container').append(`
                     <div class="block" data-id="${block.id}"> 
-                        <h4>${block.title}</h4>
-                        <p>${block.description}</p>
-						<a href="application/index.php?block_id=${block.id}" class="order-btn">Оформить</a><br />
+                        <div class="title">
+                            <h4>${block.title}</h4>
+                        </div>
+                        <div class="description">
+                            <p>${block.description}</p>
+                        </div>
+						    <a href="application/index.php?block_id=${block.id}" class="order-btn">Оформить</a><br />
                         <div class="remove-btn">Деактивировать</div>
                     </div>
                     `);
