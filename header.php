@@ -23,6 +23,22 @@ use Bitrix\Main\Page\Asset;
 			LOGO </i> </a>
 		</div>
 	</div>
+
+	<div id='content'>
+		
+			<div id='topline' class='dis-flex'>
+				<div id='timer'><?=date( 'd.m.Y H:i' )?></div>
+				<div id='auth'>	
+					<div id='login'>
+						<a data-toggle="modal" data-target="#loginModal" href=''>Вход</a>
+					</div>
+				</div>
+			</div>
+			
+			<div id='header' class='dis-flex'>
+				<div id='logo'>Laboratory</div>
+				<div id='search'></div>
+			</div>
 	<div id="navigation" class="navig">
 		<div id="menu-container">
 			<a href="/local/lab/" class="ga-nav main">Главная</a>
