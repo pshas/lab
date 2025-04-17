@@ -41,7 +41,7 @@ use Bitrix\Main\Page\Asset;
 			</div>
 	<div id="navigation" class="navig">
 		<div id="menu-container">
-			<a href="/local/lab/" class="ga-nav main">Главная</a>
+			<a href="/local/lab/" class="ga-nav main active">Главная</a>
 			<a href="/local/lab/my_application" class="ga-nav application">Мои заявки</a>
 			<a href="/local/lab/tasks" class="ga-nav tasks">В работе</a>
 			<a href="/local/lab/" class="ga-nav reports">Отчёты</a>
@@ -51,3 +51,39 @@ use Bitrix\Main\Page\Asset;
 	</div>
 </div>
 </header>
+
+
+<style>
+.navig a {
+    /* Стили для обычных ссылок */
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.navig a.active {
+    /* Стили для активной ссылки */
+    color: #0066cc;
+    font-weight: bold;
+    border-bottom: 2px solid #0066cc;
+}
+
+.navig a:hover {
+    /* Стили при наведении */
+    color: #0066cc;
+}
+
+</style>
+
+<script>
+const currentUrl = window.location.pathname;
+
+const navLinks = document.querySelectorAll('#menu-container a');
+
+navLinks.forEach(link => {
+    if (link.getAttribute('href') === currentUrl) {
+        link.classList.add('active');
+    }
+});
+</script>
