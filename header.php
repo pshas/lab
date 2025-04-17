@@ -55,22 +55,18 @@ use Bitrix\Main\Page\Asset;
 
 <style>
 .navig a {
-    /* Стили для обычных ссылок */
-    color: #333;
     text-decoration: none;
     padding: 5px 10px;
     transition: all 0.3s ease;
 }
 
 .navig a.active {
-    /* Стили для активной ссылки */
     color: #0066cc;
     font-weight: bold;
     border-bottom: 2px solid #0066cc;
 }
 
 .navig a:hover {
-    /* Стили при наведении */
     color: #0066cc;
 }
 
