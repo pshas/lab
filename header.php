@@ -72,7 +72,7 @@ use Bitrix\Main\Page\Asset;
     font-size: 14px;
     font-weight: 400;
 	cursor:pointer;
-	box-sizing: unset;
+	
 }
 .navig .ga-nav:first-child{
 	background-image:none;
@@ -82,7 +82,9 @@ use Bitrix\Main\Page\Asset;
 .navig .ga-nav:hover{
 	background-color: #248fca;
 }
-
+body {
+	box-sizing: unset;
+}
 </style>
 
 <script>
