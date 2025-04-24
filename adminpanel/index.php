@@ -1,5 +1,6 @@
 <?
 require("../header.php");
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 ?> 
 <!-- Кнопка для открытия модального окна -->
 <button id="openModal">Добавить пользователя в группу</button>
@@ -171,3 +172,5 @@ $APPLICATION->AddChainItem($APPLICATION->GetTitle(), "./files");
 	)
 );
 ?>
+
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
