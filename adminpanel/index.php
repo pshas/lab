@@ -153,3 +153,21 @@ BX.ready(function() {
     };
 });
 </script>
+
+
+<?
+IncludeModuleLangFile($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/intranet/public/docs/shared/index.php");
+$APPLICATION->SetTitle("Раздел_тест");
+$APPLICATION->AddChainItem($APPLICATION->GetTitle(), "./files");
+?>
+
+<?$APPLICATION->IncludeComponent(
+	"bitrix:disk.common",
+	"",
+	Array(
+		"SEF_FOLDER" => "./files",
+		"SEF_MODE" => "Y",
+		"STORAGE_ID" => "10"
+	)
+);
+?>
