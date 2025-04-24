@@ -58,7 +58,7 @@ use Bitrix\Main\Page\Asset;
 	height:70px;
 }
 
-.navig .item{
+.navig .ga-nav{
 	width:192px;	
 	color: #fff;
 	background-color: #78ccfd;
@@ -72,12 +72,12 @@ use Bitrix\Main\Page\Asset;
     font-weight: 400;
 	cursor:pointer;
 }
-.navig .item:first-child{
+.navig .ga-nav:first-child{
 	background-image:none;
 }
 
-.navig .item.activ,
-.navig .item:hover{
+.navig .ga-nav.activ,
+.navig .ga-nav:hover{
 	background-color: #248fca;
 }
 
