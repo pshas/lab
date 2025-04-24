@@ -59,7 +59,7 @@ use Bitrix\Main\Page\Asset;
 }
 
 .navig .ga-nav{
-	width:192px;	
+	width:160px;	
 	color: #fff;
 	background-color: #78ccfd;
 	background-image: url( ../img/menu-sepa.jpg );
