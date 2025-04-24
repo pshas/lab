@@ -168,7 +168,7 @@ $APPLICATION->AddChainItem($APPLICATION->GetTitle(), "./files");
 	Array(
 		"SEF_FOLDER" => "./files",
 		"SEF_MODE" => "Y",
-		"STORAGE_ID" => "10"
+		"STORAGE_ID" => "100000"
 	)
 );
 ?>
