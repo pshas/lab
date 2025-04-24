@@ -1,6 +1,6 @@
 <?
-require("../header.php");
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+require("../header.php");
 ?> 
 <!-- Кнопка для открытия модального окна -->
 <button id="openModal">Добавить пользователя в группу</button>
