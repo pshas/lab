@@ -54,20 +54,31 @@ use Bitrix\Main\Page\Asset;
 
 
 <style>
-.navig a {
-    text-decoration: none;
-    padding: 5px 10px;
-    transition: all 0.3s ease;
+.navig{
+	height:70px;
 }
 
-.navig a.active {
-    color: #0066cc;
-    font-weight: bold;
-    border-bottom: 2px solid #0066cc;
+.navig .item{
+	width:192px;	
+	color: #fff;
+	background-color: #78ccfd;
+	background-image: url( ../img/menu-sepa.jpg );
+	background-repeat:no-repeat;
+	background-position:left;
+	text-transform: uppercase;
+	text-align:center;
+	line-height:70px;
+    font-size: 14px;
+    font-weight: 400;
+	cursor:pointer;
+}
+.navig .item:first-child{
+	background-image:none;
 }
 
-.navig a:hover {
-    color: #0066cc;
+.navig .item.activ,
+.navig .item:hover{
+	background-color: #248fca;
 }
 
 </style>
