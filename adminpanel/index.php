@@ -157,6 +157,7 @@ BX.ready(function() {
 
 
 <?
+/*
 IncludeModuleLangFile($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/intranet/public/docs/shared/index.php");
 $APPLICATION->SetTitle("Раздел_тест");
 $APPLICATION->AddChainItem($APPLICATION->GetTitle(), "./files");
@@ -171,6 +172,7 @@ $APPLICATION->AddChainItem($APPLICATION->GetTitle(), "./files");
 		"STORAGE_ID" => "100000"
 	)
 );
+*/
 ?>
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
