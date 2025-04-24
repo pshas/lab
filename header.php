@@ -18,12 +18,6 @@ use Bitrix\Main\Page\Asset;
 	<script src="/local/lab/jquery-3.6.0.min.js"></script>
 	<link rel="stylesheet" href="/local/lab/form.css">
 <div>
-	<div id="top-bar" class="classic">
-		<div id="page-top" class="lab-bar">
-			<a id="lab-logo" href="http://172.18.2.81/local/lab/" class="lab-bar-item" title="Домашняя" style="width: 75px;" aria-label="Home link"> <i class="lab" style="position: relative; z-index: 1; color: #04aa6d; font-size: 40px" aria-hidden="true">
-			LOGO </i> </a>
-		</div>
-	</div>
 
 	<div id='content'>
 		
