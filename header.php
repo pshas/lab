@@ -108,6 +108,13 @@ a{
     font-size: 11px;
     line-height: 12px;	
 }
+
+.dis-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 </style>
 
 <script>
