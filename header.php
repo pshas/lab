@@ -25,7 +25,7 @@ use Bitrix\Main\Page\Asset;
 				<div id='timer'><?=date( 'd.m.Y H:i' )?></div>
 				<div id='auth'>	
 					<div id='login'>
-						<a data-toggle="modal" data-target="#loginModal" href=''>Вход</a>
+						<a class='user'><? echo $USER->GetFullName();?></a>
 					</div>
 				</div>
 			</div>
@@ -78,6 +78,28 @@ use Bitrix\Main\Page\Asset;
 }
 body {
 	box-sizing: unset;
+}
+
+#content{
+	padding-top: 82px;
+	padding-bottom: 70px;	
+	margin:0 auto;
+	width:1152px;
+}
+/**/
+#topline{
+    background-color: #eee;
+    padding: 14px 16px 14px 27px;
+	justify-content: space-between;	
+}
+
+#topline,
+a{
+	color: #aaa;    
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 12px;	
 }
 </style>
 
