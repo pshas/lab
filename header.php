@@ -80,6 +80,13 @@ body {
 	box-sizing: unset;
 }
 
+#header{
+	background-color: #ffffff;
+	height:132px;
+	align-items: center;
+	justify-content: space-between;
+	padding:0 45px;
+}
 #content{
 	padding-top: 82px;
 	padding-bottom: 70px;	
