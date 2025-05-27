@@ -34,23 +34,40 @@ use Bitrix\Main\Page\Asset;
 				<div id='logo'>Laboratory</div>
 				<div id='search'></div>
 			</div>
-	<div id="navigation" class="navig">
-		<div id="menu-container">
-			<a href="/local/lab/" class="ga-nav main active">Главная</a>
-			<a href="/local/lab/my_application" class="ga-nav application">Мои заявки</a>
-			<a href="/local/lab/tasks" class="ga-nav tasks">В работе</a>
-			<a href="/local/lab/" class="ga-nav reports">Отчёты</a>
-			<a href="/local/lab/" class="ga-nav archive">Архив</a>
-			<a href="/local/lab/contacts/" class="ga-nav contacts">Контакты</a>
-		</div>
-	</div>
-</div>
+			<div id="navigation" class="navig">
+    			<div id="menu-container">
+        <?php
+        $currentPage = $APPLICATION->GetCurPage(false);
+        $menuItems = [
+            ["link" => "/local/lab/", "class" => "ga-nav main", "text" => "Главная"],
+            ["link" => "/local/lab/my_application", "class" => "ga-nav application", "text" => "Мои заявки"],
+            ["link" => "/local/lab/tasks", "class" => "ga-nav tasks", "text" => "В работе"],
+            ["link" => "/local/lab/", "class" => "ga-nav reports", "text" => "Отчёты"],
+            ["link" => "/local/lab/", "class" => "ga-nav archive", "text" => "Архив"],
+            ["link" => "/local/lab/contacts/", "class" => "ga-nav contacts", "text" => "Контакты"],
+        ];
+
+        foreach ($menuItems as $item) {
+            $isActive = (strpos($currentPage, $item["link"]) === 0) ? "active" : "";
+            ?>
+            <a href="<?= $item["link"] ?>" class="<?= $item["class"] ?> <?= $isActive ?>"><?= $item["text"] ?></a>
+            <?php
+        }
+        ?>
+    	
+				</div>
+			</div>
 </header>
 
 
 <style>
 .navig{
 	height:70px;
+}
+
+.active {
+    background-color: #007bff;
+    color: #fff;
 }
 
 .navig .ga-nav{
