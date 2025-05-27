@@ -1,0 +1,201 @@
+
+#content{
+	padding-top: 82px;
+	padding-bottom: 70px;	
+	margin:0 auto;
+	width:1152px;
+}
+/**/
+#topline{
+    background-color: #eee;
+    padding: 14px 16px 14px 27px;
+	justify-content: space-between;	
+}
+
+#topline,
+a{
+	color: #aaa;    
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 12px;	
+}
+
+#auth{
+	width:45px;	
+}
+
+#auth a{
+	color:#aaa;
+}
+
+#auth a:hover{
+	text-decoration: revert;
+}
+/**/
+#header{
+	background-color: #ffffff;
+	height:132px;
+	align-items: center;
+	justify-content: space-between;
+	padding:0 45px;
+}
+#header #logo,
+#header #search{
+	background-repeat: no-repeat;	
+	background-position: center;
+	background-size: 100%;
+}
+#header #logo{	
+	background-image: url(./img/logo.png);
+	width:180px;
+	height:70px;
+	background-size:180px 70px;
+	background-position: left;
+	line-height: 70px;
+	text-transform: uppercase;
+	color:#2185c5;
+	padding-left:200px;
+	font-size:30px;
+}
+
+#header #search{
+	background-image: url(./img/search.jpg);
+	width:216px;
+	height:32px;	
+}
+
+/**/
+
+#topmenu{
+	height:70px;
+}
+
+#topmenu .item{
+	display:block;
+	width:192px;	
+	color: #fff;
+	background-color: #78ccfd;
+	background-image: url( ./img/menu-sepa.jpg );
+	background-repeat:no-repeat;
+	background-position:left;
+	text-transform: uppercase;
+	text-align:center;
+	line-height:70px;
+    font-size: 14px;
+    font-weight: 400;
+	cursor:pointer;
+}
+#topmenu .item:first-child{
+	background-image:none;
+}
+
+#topmenu .item.activ,
+#topmenu .item:hover{
+	background-color: #248fca;
+}
+
+/**/
+#companies{
+	margin:30px 0;
+	justify-content: space-between;	
+}
+
+#companies .item{	
+	display:block;
+    text-transform: none;
+    font-weight: 0;
+    font-size: unset;
+    line-height: unset;	
+	
+	float: left;
+	background: #ffffff;
+	width:268px;
+	margin-right: 26px;
+	
+	margin-bottom: 26px;
+	overflow: hidden;
+	padding:15px;
+	
+}
+
+#companies .item:nth-child(4n){
+	margin-right: 0;
+}
+
+#companies .item .icon{
+	height:75px;
+	background-image:url( ./img/company.png );
+	background-size:contain;
+	background-repeat: no-repeat;
+	background-position:left;
+}
+
+#companies .item .title{
+	margin:10px 0;
+	height:50px;    
+    font-weight: 600;
+	font-size: 20px;	
+	color: #000000;
+}
+
+#companies .item .text{
+	margin-bottom:20px;
+	height:160px;	
+	font-size: 18px;	
+}
+
+
+/**/
+#laboratory{
+	margin:30px 0;
+	justify-content: start;
+}
+
+#laboratory .item{
+	background: #ffffff;
+	width:268px;
+	margin-right: 26px;
+	margin-bottom: 26px;
+}
+
+#laboratory .item:nth-child(4n){
+	margin-right: 0;
+}
+
+#laboratory .item .title{
+	height:88px;	
+	text-transform: uppercase;  
+    color: #2185c5;
+    font-weight: 600;
+	font-size: 25px;
+	text-align:center;
+	line-height:88px;
+	background-color: #eee;
+}
+
+#laboratory .item .text{
+	margin-bottom:20px;
+	height:161px;
+}
+
+#laboratory .item .body{
+	padding: 36px 15px 39px;
+}
+
+  
+
+/**/
+#footer{
+	margin-top: 30px;
+    padding: 19px 23px 19px 32px;
+    background-color: #eee;
+    color: #aaa;
+	text-transform: uppercase;
+	font-weight: 100;	
+}
+
+#footer span{
+	font-weight: 400;
+	margin-right: 20px;
+}

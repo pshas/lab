@@ -1,0 +1,70 @@
+.modal {
+    display: none; /* Скрыть модалку по умолчанию */
+    overflow: hidden; /* Скрыть переполнение */
+    position: fixed; /* Зафиксировать на экране */
+    z-index: 1050; /* Задать уровень перед другими элементами */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ширина 100% */
+    height: 100%; /* Высота 100% */
+    outline: 0; /* Убрать обводку */
+}
+
+.modal-dialog {
+    position: relative; /* Относительное позиционирование */
+    width: 400px; /* Ширина по содержимому */
+    margin: 1.75rem auto; /* Отступы сверху и снизу, центрирование */
+}
+
+.modal-content {
+    border: 0; /* Убрать границу */
+    border-radius: 0.3rem; /* Радиус закругления */
+    background-color: #fff; /* Цвет фона */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); /* Тень */
+    outline: 0; /* Убрать обводку */
+}
+
+.modal-header {
+    display: flex; /* Сделать flex-контейнером */
+    align-items: center; /* Центрировать по вертикали */
+    justify-content: space-between; /* Распределить элементы */
+    padding: 1rem; /* Отступы */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2); /* Нижняя граница */
+}
+
+.modal-title {
+    margin: 0; /* Убрать отступы */
+    line-height: 1.5; /* Высота строки */
+}
+
+.modal-body {
+    position: relative; /* Относительное позиционирование */
+    padding: 1rem; /* Отступы */
+}
+
+.modal-footer {
+    display: flex; /* Сделать flex-контейнером */
+    justify-content: flex-end; /* Выровнять элементы вправо */
+    padding: 0.75rem; /* Отступы */
+    border-top: 1px solid rgba(0, 0, 0, 0.2); /* Верхняя граница */
+}
+
+.modal-backdrop {
+    position: fixed; /* Зафиксировать на экране */
+    top: 0; /* Отступ сверху */
+    left: 0; /* Отступ слева */
+    width: 100%; /* Ширина 100% */
+    height: 100%; /* Высота 100% */
+    z-index: 1040; /* Уровень за модалкой */
+    background-color: rgba(0, 0, 0, 0.5); /* Цвет фона с прозрачностью */
+}
+
+.fade {
+    transition: opacity 0.15s linear; /* Плавный переход */
+}
+.show {
+    display: block; /* Показать модалку */
+    opacity: 1; /* Полная видимость */
+}
+
+

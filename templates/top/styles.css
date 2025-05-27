@@ -1,0 +1,50 @@
+body{
+	padding:0;
+	margin: 0;
+    background: #fff url(./img/body.jpg) 50% 0 no-repeat;
+    color: #aaaaab;
+    font: 14px/23px Arial,Helvetica,sans-serif;
+    position: relative; 
+	font-family: open sans,sans-serif;	
+}
+a{
+	text-decoration: none;
+	font-family: open sans,sans-serif;
+}
+.dis-flex{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: space-around;
+}
+
+.butt a {
+	background-color: #78ccfd;
+	color: #ffffff;
+	display: block;
+	width: 100%;
+	height: 40px;
+	font-weight: 300;
+	text-decoration: none;
+	text-align: center;
+	line-height: 40px;
+}
+.butt a:hover{
+	background-color: #248fca;
+}
+
+.row::after{
+	clear: both;
+}
+.row::after,
+.row::before{
+	display: table;
+	content: " ";
+}
+
+.col-md{
+	min-height: 1px;
+	float:left;
+	width: 100%;
+}
+
+/**/
