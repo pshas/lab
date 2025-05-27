@@ -3,6 +3,22 @@ $APPLICATION->SetTitle("Lab"); */
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/main/include/prolog_before.php"); 
 ?>
 
+<?$APPLICATION->IncludeComponent(
+    "bitrix:menu",
+    "top", // можешь назвать как угодно, но шаблон должен быть создан в /bitrix/templates/твой_шаблон/components/bitrix/menu/top/
+    array(
+        "ROOT_MENU_TYPE" => "top",
+        "MENU_CACHE_TYPE" => "N",
+        "MENU_CACHE_TIME" => "3600",
+        "MENU_CACHE_USE_GROUPS" => "Y",
+        "MAX_LEVEL" => "1",
+        "CHILD_MENU_TYPE" => "left",
+        "USE_EXT" => "Y",
+        "DELAY" => "N",
+        "ALLOW_MULTI_SELECT" => "N"
+    )
+);?>
+
 <?php
 if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 use Bitrix\Main\Page\Asset;
