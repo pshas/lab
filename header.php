@@ -65,10 +65,7 @@ use Bitrix\Main\Page\Asset;
 	height:70px;
 }
 
-.active {
-    background-color: #007bff;
-    color: #fff;
-}
+
 
 .navig .ga-nav{
 	width: 181px;	
@@ -84,6 +81,11 @@ use Bitrix\Main\Page\Asset;
     font-weight: 400;
 	cursor:pointer;
 	
+}
+
+.active {
+    background-color: #007bff;
+    color: #fff;
 }
 .navig .ga-nav:first-child{
 	background-image:none;
