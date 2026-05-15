@@ -1,83 +1,96 @@
-Да, здесь уже видно конкретную разницу.
+Тогда да, это не конкретный проект, а проблема именно с пользователем 101.
 
-У пользователя 101 в группе/проекте 8:
+Раз у него при создании новой группы тоже пустой список, проверяй не b_sonet_user2group, а его базовые связи.
 
-role = A
-auto_member = N
-initiated_by_type = U
+Сравни 101 и рабочую копию 139 так:
 
-У рабочей копии 139:
+SELECT
+    ua.user_id,
+    ua.provider_id,
+    ua.access_code
+FROM public.b_user_access ua
+WHERE ua.user_id IN (101, 139)
+ORDER BY ua.provider_id, ua.access_code, ua.user_id;
 
-role = K
-auto_member = Y
-initiated_by_type = G
+И отдельно покажи только отличия:
 
-Это может быть причиной.
+WITH u101 AS (
+    SELECT provider_id, access_code
+    FROM public.b_user_access
+    WHERE user_id = 101
+),
+u139 AS (
+    SELECT provider_id, access_code
+    FROM public.b_user_access
+    WHERE user_id = 139
+)
+SELECT
+    COALESCE(u101.provider_id, u139.provider_id) AS provider_id,
+    COALESCE(u101.access_code, u139.access_code) AS access_code,
+    CASE
+        WHEN u101.access_code IS NULL THEN 'есть только у 139'
+        WHEN u139.access_code IS NULL THEN 'есть только у 101'
+    END AS diff
+FROM u101
+FULL OUTER JOIN u139
+    ON u101.provider_id = u139.provider_id
+   AND u101.access_code = u139.access_code
+WHERE u101.access_code IS NULL
+   OR u139.access_code IS NULL
+ORDER BY provider_id, access_code;
 
-В Bitrix b_sonet_user2group.role обычно:
-
-A — владелец/руководитель группы
-E — модератор/помощник
-K — участник
-
-У тебя проблемный пользователь является руководителем проекта, а рабочая копия — обычным участником. Поэтому у них разные access_code:
-
-SG8_A — руководитель/владелец группы
-SG8_K — участник группы
-
-Но подозрительно вот это:
-
-auto_member = N
-initiated_by_type = U
-
-А у рабочей копии:
-
-auto_member = Y
-initiated_by_type = G
-
-То есть 139 добавлен автоматически от группы/структуры, а 101 вручную как руководитель.
-
-Я бы проверил ещё таблицу самой группы:
+Главное, что надо проверить у 101:
 
 SELECT
     id,
-    name,
-    owner_id,
-    initiator_id,
-    visible,
-    opened,
-    closed,
-    project,
-    scrum_master_id
-FROM public.b_sonet_group
-WHERE id = 8;
+    login,
+    active,
+    external_auth_id,
+    xml_id,
+    uf_department
+FROM public.b_user
+WHERE id IN (101, 139);
 
-И отдельно:
+Если у 101 заполнено external_auth_id типа socservices, email, extranet, imconnector или что-то нестандартное — Bitrix может считать его не обычным intranet-пользователем.
+
+Ещё проверь группы пользователя:
 
 SELECT
-    id,
-    user_id,
-    group_id,
-    role,
-    auto_member,
-    initiated_by_type,
-    initiated_by_user_id
-FROM public.b_sonet_user2group
-WHERE group_id = 8
-ORDER BY role, user_id;
+    ug.user_id,
+    ug.group_id,
+    g.name,
+    g.string_id,
+    ug.date_active_from,
+    ug.date_active_to
+FROM public.b_user_group ug
+LEFT JOIN public.b_group g ON g.id = ug.group_id
+WHERE ug.user_id IN (101, 139)
+ORDER BY ug.user_id, ug.group_id;
 
-Главное — проверь, не стоит ли у проекта owner_id = 101. Если да, то проблема может быть именно в правах владельца проекта или в том, что у владельца нет корректного SG8_K, только SG8_A.
+Судя по твоим скринам, у 101 есть лишний код AE1 и D1/SND1, а у 139 их нет. Но важнее не лишние коды, а чтобы у 101 были обычные:
 
-Для теста можно временно через интерфейс:
+G2 / G3 / G4 / G17 / G57
+D78
+DR1 / DR77 / DR78
+IU101
+U101
 
-1. назначить другим пользователем владельца проекта;
+Если они есть, а список всё равно пустой — я бы смотрел уже не SQL, а профиль пользователя:
+
+1. ACTIVE = Y
 
 
-2. добавить 101 как обычного участника/модератора;
+2. EXTERNAL_AUTH_ID пустой или нормальный для интранет-пользователя
 
 
-3. проверить, появился ли список приглашения.
+3. пользователь состоит в группе Сотрудники
+
+
+4. пользователь не экстранет
+
+
+5. в карточке указан отдел UF_DEPARTMENT
 
 
 
-SQL руками менять пока не советую. Лучше сначала увидеть b_sonet_group.
+Самый показательный запрос сейчас — b_user и b_user_group для 101 и 139.
